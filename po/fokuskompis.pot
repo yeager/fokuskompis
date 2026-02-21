@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-21 14:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: fokuskompis/main.py:206 fokuskompis/main.py:645
+msgid "Fokuskompis"
+msgstr ""
+
+#: fokuskompis/main.py:224 fokuskompis/main.py:660
+msgid "Preferences"
+msgstr ""
+
+#: fokuskompis/main.py:225 fokuskompis/main.py:704
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: fokuskompis/main.py:226
+msgid "About Fokuskompis"
+msgstr ""
+
+#: fokuskompis/main.py:231 fokuskompis/main.py:402
+msgid "New Task"
+msgstr ""
+
+#: fokuskompis/main.py:243
+msgid "Focus"
+msgstr ""
+
+#: fokuskompis/main.py:248
+msgid "Tasks"
+msgstr ""
+
+#: fokuskompis/main.py:253
+msgid "Parked"
+msgstr ""
+
+#: fokuskompis/main.py:269
+msgid "No tasks yet"
+msgstr ""
+
+#: fokuskompis/main.py:286
+msgid "Start"
+msgstr ""
+
+#: fokuskompis/main.py:292
+msgid "Pause"
+msgstr ""
+
+#: fokuskompis/main.py:298
+msgid "Reset"
+msgstr ""
+
+#: fokuskompis/main.py:308
+msgid "✓ Done"
+msgstr ""
+
+#: fokuskompis/main.py:314
+msgid "Skip →"
+msgstr ""
+
+#: fokuskompis/main.py:319
+msgid "💭 Park Thought"
+msgstr ""
+
+#: fokuskompis/main.py:355
+msgid "Quick thought…"
+msgstr ""
+
+#: fokuskompis/main.py:388
+#, python-brace-format
+msgid "Step {current} of {total}: {step}"
+msgstr ""
+
+#: fokuskompis/main.py:397
+msgid "All done! 🎉"
+msgstr ""
+
+#: fokuskompis/main.py:403
+msgid "Enter task title and optional steps (one per line):"
+msgstr ""
+
+#: fokuskompis/main.py:409
+msgid "Task title"
+msgstr ""
+
+#: fokuskompis/main.py:412
+msgid "Steps (optional, one per line):"
+msgstr ""
+
+#: fokuskompis/main.py:424 fokuskompis/main.py:480
+msgid "Cancel"
+msgstr ""
+
+#: fokuskompis/main.py:425
+msgid "Add"
+msgstr ""
+
+#: fokuskompis/main.py:454
+msgid "⭐ Great job! Task completed! ⭐"
+msgstr ""
+
+#: fokuskompis/main.py:457
+msgid "Well done!"
+msgstr ""
+
+#: fokuskompis/main.py:474
+msgid "Park a Thought"
+msgstr ""
+
+#: fokuskompis/main.py:475
+msgid "Write it down and get back to focus:"
+msgstr ""
+
+#: fokuskompis/main.py:476
+msgid "What's on your mind?"
+msgstr ""
+
+#: fokuskompis/main.py:481
+msgid "Park It"
+msgstr ""
+
+#: fokuskompis/main.py:534
+msgid "Time to focus!"
+msgstr ""
+
+#: fokuskompis/main.py:539
+msgid "Break time!"
+msgstr ""
+
+#: fokuskompis/main.py:552
+msgid "Completed"
+msgstr ""
+
+#: fokuskompis/main.py:554
+#, python-brace-format
+msgid "{n} steps"
+msgstr ""
+
+#: fokuskompis/main.py:575
+msgid "Convert to task"
+msgstr ""
+
+#: fokuskompis/main.py:654
+msgid "Focus & task manager for people with ADHD and autism"
+msgstr ""
+
+#: fokuskompis/main.py:661
+msgid "Timer"
+msgstr ""
+
+#: fokuskompis/main.py:663
+msgid "Pomodoro Timer"
+msgstr ""
+
+#: fokuskompis/main.py:668
+msgid "Work duration (minutes)"
+msgstr ""
+
+#: fokuskompis/main.py:673
+msgid "Break duration (minutes)"
+msgstr ""
+
+#: fokuskompis/main.py:678
+msgid "Long break duration (minutes)"
+msgstr ""
+
+#: fokuskompis/main.py:682
+msgid "Sound notifications"
+msgstr ""
+
+#: fokuskompis/main.py:706
+msgid ""
+"Ctrl+Q — Quit\n"
+"Ctrl+N — New task\n"
+"Space — Start/pause timer"
+msgstr ""
+
+#: fokuskompis/main.py:711
+msgid "Close"
+msgstr ""

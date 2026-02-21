@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Fokuskompis
+Name[sv]=Fokuskompis
+GenericName=Focus Manager
+GenericName[sv]=Fokushanterare
+Comment=Focus & task manager for ADHD and autism
+Comment[sv]=Fokus- och uppgiftshanterare för ADHD och autism
+Exec=fokuskompis
+Icon=se.danielnylander.fokuskompis
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;Accessibility;
+Keywords=focus;adhd;autism;pomodoro;task;
+Keywords[sv]=fokus;adhd;autism;pomodoro;uppgift;
