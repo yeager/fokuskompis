@@ -18,6 +18,7 @@ from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 
 from fokuskompis import __version__
 from fokuskompis.accessibility import apply_large_text
+from fokuskompis.music import MusicPlayer
 
 # i18n
 try:
@@ -233,6 +234,9 @@ class MainWindow(Adw.ApplicationWindow):
         add_btn.connect("clicked", self._on_add_task)
         header.pack_start(add_btn)
 
+        # Music player
+        self.music_player = MusicPlayer("fokuskompis")
+
         # View stack
         self.stack = Adw.ViewStack()
         switcher = Adw.ViewSwitcherBar()
@@ -254,10 +258,92 @@ class MainWindow(Adw.ApplicationWindow):
         self.stack.add_titled(parked_page, "parked", _("Parked"))
         self.stack.get_page(parked_page).set_icon_name("user-idle-symbolic")
 
+        # Music page
+        music_page = self._build_music_page()
+        self.stack.add_titled(music_page, "music", _("Music"))
+        self.stack.get_page(music_page).set_icon_name("audio-x-generic-symbolic")
+
         self.main_box.append(self.stack)
         self.main_box.append(switcher)
 
         self._update_focus_view()
+
+
+    def _build_music_page(self):
+        page = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=16)
+        page.set_margin_top(20)
+        page.set_margin_bottom(20)
+        page.set_margin_start(20)
+        page.set_margin_end(20)
+        page.set_valign(Gtk.Align.CENTER)
+
+        title = Gtk.Label(label=_("Focus Music"))
+        title.add_css_class("title-1")
+        page.append(title)
+
+        subtitle = Gtk.Label(label=_("Classical music to help you concentrate"))
+        subtitle.add_css_class("dim-label")
+        page.append(subtitle)
+
+        self.music_now_playing = Gtk.Label(label="")
+        self.music_now_playing.add_css_class("dim-label")
+        self.music_now_playing.set_margin_top(12)
+        page.append(self.music_now_playing)
+
+        self.music_play_btn = Gtk.Button()
+        self.music_play_btn.set_icon_name("media-playback-start-symbolic")
+        self.music_play_btn.add_css_class("circular")
+        self.music_play_btn.add_css_class("suggested-action")
+        self.music_play_btn.set_halign(Gtk.Align.CENTER)
+        self.music_play_btn.set_size_request(64, 64)
+        self.music_play_btn.set_tooltip_text(_("Play / Pause"))
+        self.music_play_btn.connect("clicked", self._on_music_toggle)
+        page.append(self.music_play_btn)
+
+        vol_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        vol_box.set_halign(Gtk.Align.CENTER)
+        vol_box.set_margin_top(12)
+        vol_box.append(Gtk.Image.new_from_icon_name("audio-volume-medium-symbolic"))
+
+        self.music_volume = Gtk.Scale.new_with_range(Gtk.Orientation.HORIZONTAL, 0, 100, 5)
+        self.music_volume.set_value(30)
+        self.music_volume.set_size_request(200, -1)
+        self.music_volume.set_draw_value(False)
+        self.music_volume.connect("value-changed", self._on_music_volume)
+        vol_box.append(self.music_volume)
+        page.append(vol_box)
+
+        tracks = self.music_player.get_available_tracks()
+        if tracks:
+            for t in tracks:
+                label = f"\U0001f3b5 {t['composer']} \u2014 {t['title']}" if t['composer'] else f"\U0001f3b5 {t['title']}"
+                page.append(Gtk.Label(label=label, css_classes=["dim-label"]))
+        else:
+            page.append(Gtk.Label(
+                label=_("No music files found.\nAdd .mp3 files to ~/.config/fokuskompis/music/"),
+                css_classes=["dim-label"], margin_top=16))
+
+        return page
+
+    def _on_music_toggle(self, btn):
+        if self.music_player.is_playing:
+            self.music_player.pause()
+            btn.set_icon_name("media-playback-start-symbolic")
+            self.music_now_playing.set_text("")
+        else:
+            tracks = self.music_player.get_available_tracks()
+            if tracks:
+                self.music_player.play(tracks[0]["path"])
+                btn.set_icon_name("media-playback-pause-symbolic")
+                t = tracks[0]
+                label = f"\u266b {t['composer']} \u2014 {t['title']}" if t['composer'] else f"\u266b {t['title']}"
+                self.music_now_playing.set_text(label)
+            elif self.music_player._pipeline:
+                self.music_player.resume()
+                btn.set_icon_name("media-playback-pause-symbolic")
+
+    def _on_music_volume(self, scale):
+        self.music_player.set_volume(scale.get_value() / 100.0)
 
     def _build_focus_page(self):
         page = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12)
