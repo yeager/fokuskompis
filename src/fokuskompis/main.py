@@ -17,6 +17,7 @@ gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 
 from fokuskompis import __version__
+from fokuskompis.accessibility import apply_large_text
 
 # i18n
 try:
