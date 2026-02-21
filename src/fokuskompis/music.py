@@ -10,10 +10,25 @@ Gst.init(None)
 # Music files bundled with the app (installed to /usr/share/<app>/music/)
 # Falls back to ~/.config/<app>/music/ for user-added tracks
 BUNDLED_TRACKS = {
+    "satie_gymnopedie1": {
+        "file": "satie_gymnopedie1.mp3",
+        "title": "Gymnopédie No. 1",
+        "composer": "Erik Satie",
+    },
+    "debussy_clair_de_lune": {
+        "file": "debussy_clair_de_lune.mp3",
+        "title": "Clair de Lune",
+        "composer": "Claude Debussy",
+    },
     "bach_air": {
         "file": "bach_air.mp3",
         "title": "Air on the G String",
         "composer": "J.S. Bach",
+    },
+    "beethoven_moonlight": {
+        "file": "beethoven_moonlight.mp3",
+        "title": "Moonlight Sonata",
+        "composer": "Ludwig van Beethoven",
     },
 }
 
@@ -75,6 +90,31 @@ class MusicPlayer:
                             "composer": "",
                         })
         return tracks
+
+    def play_next(self):
+        """Play next track in list."""
+        tracks = self.get_available_tracks()
+        if not tracks:
+            return False
+        if self._current_track:
+            paths = [t["path"] for t in tracks]
+            try:
+                idx = paths.index(self._current_track)
+                next_idx = (idx + 1) % len(paths)
+            except ValueError:
+                next_idx = 0
+        else:
+            next_idx = 0
+        return self.play(tracks[next_idx]["path"])
+
+    def get_current_track_info(self) -> dict | None:
+        """Get info about currently playing track."""
+        if not self._current_track:
+            return None
+        for t in self.get_available_tracks():
+            if t["path"] == self._current_track:
+                return t
+        return None
 
     def play(self, track_path: str | None = None):
         """Start playing. If no path given, play first available track."""
