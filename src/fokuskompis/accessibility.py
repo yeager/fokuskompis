@@ -5,13 +5,13 @@ from gi.repository import Gtk, Gdk
 
 _LARGE_TEXT_CSS = b"""
 window label, window button label, window .title, window .subtitle {
-    font-size: 20px !important;
+    font-size: 20px;
 }
 window headerbar .title {
-    font-size: 22px !important;
+    font-size: 22px;
 }
 window .large-text {
-    font-size: 24px !important;
+    font-size: 24px;
 }
 window button {
     min-height: 44px;
