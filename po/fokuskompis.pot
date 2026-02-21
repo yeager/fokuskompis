@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 17:58+0100\n"
+"POT-Creation-Date: 2026-02-21 20:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,283 +17,293 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: main.py:208 main.py:732
+#: src/export.py:13
+msgid "Focus Companion"
+msgstr ""
+
+#: src/export.py:27
+msgid "Task"
+msgstr ""
+
+#: src/export.py:27
+msgid "Steps"
+msgstr ""
+
+#: src/export.py:27
+msgid "Done"
+msgstr ""
+
+#: src/export.py:27
+msgid "Date"
+msgstr ""
+
+#: src/export.py:33
+msgid "Yes"
+msgstr ""
+
+#: src/export.py:33
+msgid "No"
+msgstr ""
+
+#: src/export.py:38 src/export.py:112
+msgid "Parked Thoughts"
+msgstr ""
+
+#: src/export.py:74
+msgid "Focus Companion — Tasks"
+msgstr ""
+
+#: src/export.py:139
+msgid "Export Tasks"
+msgstr ""
+
+#: src/export.py:140
+msgid "Choose export format:"
+msgstr ""
+
+#: src/export.py:143 src/main.py:521 src/main.py:577
+msgid "Cancel"
+msgstr ""
+
+#: src/export.py:144
+msgid "CSV"
+msgstr ""
+
+#: src/export.py:145
+msgid "JSON"
+msgstr ""
+
+#: src/export.py:146
+msgid "PDF"
+msgstr ""
+
+#: src/export.py:167
+msgid "Save Export"
+msgstr ""
+
+#: src/export.py:181
+#, python-format
+msgid "Exported %s"
+msgstr ""
+
+#: src/export.py:184 src/export.py:207
+#, python-format
+msgid "Export error: %s"
+msgstr ""
+
+#: src/export.py:189
+msgid "Save PDF"
+msgstr ""
+
+#: src/export.py:202
+msgid "PDF exported"
+msgstr ""
+
+#: src/export.py:204
+msgid "PDF export requires cairo."
+msgstr ""
+
+#: src/main.py:208 src/main.py:742
 msgid "Fokuskompis"
 msgstr ""
 
-#: main.py:226 main.py:747
+#: src/main.py:226 src/main.py:757
 msgid "Preferences"
 msgstr ""
 
-#: main.py:227 main.py:791
+#: src/main.py:227 src/main.py:801
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: main.py:228
+#: src/main.py:228
 msgid "About Fokuskompis"
 msgstr ""
 
-#: main.py:233 main.py:489
+#: src/main.py:233 src/main.py:499
 msgid "New Task"
 msgstr ""
 
-#: main.py:248
+#: src/main.py:248
 msgid "Focus"
 msgstr ""
 
-#: main.py:253
+#: src/main.py:253
 msgid "Tasks"
 msgstr ""
 
-#: main.py:258
+#: src/main.py:258
 msgid "Parked"
 msgstr ""
 
-#: main.py:263
+#: src/main.py:263
 msgid "Music"
 msgstr ""
 
-#: main.py:280
+#: src/main.py:280
 msgid "Focus Music"
 msgstr ""
 
-#: main.py:284
+#: src/main.py:284
 msgid "Classical music to help you concentrate"
 msgstr ""
 
-#: main.py:299
+#: src/main.py:299
 msgid "Play / Pause"
 msgstr ""
 
-#: main.py:323
+#: src/main.py:323
 msgid ""
 "No music files found.\n"
 "Add .mp3 files to ~/.config/fokuskompis/music/"
 msgstr ""
 
-#: main.py:356
+#: src/main.py:327
+msgid ""
+"Public domain music. Performances by Jerzy Kulik.\n"
+"Source: Internet Archive"
+msgstr ""
+
+#: src/main.py:363
 msgid "No tasks yet"
 msgstr ""
 
-#: main.py:373
+#: src/main.py:380
 msgid "Start"
 msgstr ""
 
-#: main.py:379
+#: src/main.py:386
 msgid "Pause"
 msgstr ""
 
-#: main.py:385
+#: src/main.py:392
 msgid "Reset"
 msgstr ""
 
-#: main.py:395
+#: src/main.py:402
 msgid "✓ Done"
 msgstr ""
 
-#: main.py:401
+#: src/main.py:408
 msgid "Skip →"
 msgstr ""
 
-#: main.py:406
+#: src/main.py:413
 msgid "💭 Park Thought"
 msgstr ""
 
-#: main.py:442
+#: src/main.py:449
 msgid "Quick thought…"
 msgstr ""
 
-#: main.py:475
+#: src/main.py:482
 #, python-brace-format
 msgid "Step {current} of {total}: {step}"
 msgstr ""
 
-#: main.py:484
+#: src/main.py:492
 msgid "All done! 🎉"
 msgstr ""
 
-#: main.py:490
+#: src/main.py:494
+msgid "Add a task to get started"
+msgstr ""
+
+#: src/main.py:500
 msgid "Enter task title and optional steps (one per line):"
 msgstr ""
 
-#: main.py:496
+#: src/main.py:506
 msgid "Task title"
 msgstr ""
 
-#: main.py:499
+#: src/main.py:509
 msgid "Steps (optional, one per line):"
 msgstr ""
 
-#: main.py:511 main.py:567 export.py:143
-msgid "Cancel"
-msgstr ""
-
-#: main.py:512
+#: src/main.py:522
 msgid "Add"
 msgstr ""
 
-#: main.py:541
+#: src/main.py:551
 msgid "⭐ Great job! Task completed! ⭐"
 msgstr ""
 
-#: main.py:544
+#: src/main.py:554
 msgid "Well done!"
 msgstr ""
 
-#: main.py:561
+#: src/main.py:571
 msgid "Park a Thought"
 msgstr ""
 
-#: main.py:562
+#: src/main.py:572
 msgid "Write it down and get back to focus:"
 msgstr ""
 
-#: main.py:563
+#: src/main.py:573
 msgid "What's on your mind?"
 msgstr ""
 
-#: main.py:568
+#: src/main.py:578
 msgid "Park It"
 msgstr ""
 
-#: main.py:621
+#: src/main.py:631
 msgid "Time to focus!"
 msgstr ""
 
-#: main.py:626
+#: src/main.py:636
 msgid "Break time!"
 msgstr ""
 
-#: main.py:639
+#: src/main.py:649
 msgid "Completed"
 msgstr ""
 
-#: main.py:641
+#: src/main.py:651
 #, python-brace-format
 msgid "{n} steps"
 msgstr ""
 
-#: main.py:662
+#: src/main.py:672
 msgid "Convert to task"
 msgstr ""
 
-#: main.py:741
+#: src/main.py:751
 msgid "Focus & task manager for people with ADHD and autism"
 msgstr ""
 
-#: main.py:748
+#: src/main.py:758
 msgid "Timer"
 msgstr ""
 
-#: main.py:750
+#: src/main.py:760
 msgid "Pomodoro Timer"
 msgstr ""
 
-#: main.py:755
+#: src/main.py:765
 msgid "Work duration (minutes)"
 msgstr ""
 
-#: main.py:760
+#: src/main.py:770
 msgid "Break duration (minutes)"
 msgstr ""
 
-#: main.py:765
+#: src/main.py:775
 msgid "Long break duration (minutes)"
 msgstr ""
 
-#: main.py:769
+#: src/main.py:779
 msgid "Sound notifications"
 msgstr ""
 
-#: main.py:793
+#: src/main.py:803
 msgid ""
 "Ctrl+Q — Quit\n"
 "Ctrl+N — New task\n"
 "Space — Start/pause timer"
 msgstr ""
 
-#: main.py:798
+#: src/main.py:808
 msgid "Close"
-msgstr ""
-
-#: export.py:13
-msgid "Focus Companion"
-msgstr ""
-
-#: export.py:27
-msgid "Task"
-msgstr ""
-
-#: export.py:27
-msgid "Steps"
-msgstr ""
-
-#: export.py:27
-msgid "Done"
-msgstr ""
-
-#: export.py:27
-msgid "Date"
-msgstr ""
-
-#: export.py:33
-msgid "Yes"
-msgstr ""
-
-#: export.py:33
-msgid "No"
-msgstr ""
-
-#: export.py:38 export.py:112
-msgid "Parked Thoughts"
-msgstr ""
-
-#: export.py:74
-msgid "Focus Companion — Tasks"
-msgstr ""
-
-#: export.py:139
-msgid "Export Tasks"
-msgstr ""
-
-#: export.py:140
-msgid "Choose export format:"
-msgstr ""
-
-#: export.py:144
-msgid "CSV"
-msgstr ""
-
-#: export.py:145
-msgid "JSON"
-msgstr ""
-
-#: export.py:146
-msgid "PDF"
-msgstr ""
-
-#: export.py:167
-msgid "Save Export"
-msgstr ""
-
-#: export.py:181
-#, python-format
-msgid "Exported %s"
-msgstr ""
-
-#: export.py:184 export.py:207
-#, python-format
-msgid "Export error: %s"
-msgstr ""
-
-#: export.py:189
-msgid "Save PDF"
-msgstr ""
-
-#: export.py:202
-msgid "PDF exported"
-msgstr ""
-
-#: export.py:204
-msgid "PDF export requires cairo."
 msgstr ""
