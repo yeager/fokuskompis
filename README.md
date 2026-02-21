@@ -1,5 +1,12 @@
 # Fokuskompis
 
+
+## Screenshots
+
+| English | Svenska |
+|---------|---------|
+| ![English](screenshots/fokuskompis_en.png) | ![Svenska](screenshots/fokuskompis_sv.png) |
+
 Focus & task manager for people with ADHD and autism.
 
 ## Features
