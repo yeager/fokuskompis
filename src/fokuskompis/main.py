@@ -488,7 +488,10 @@ class MainWindow(Adw.ApplicationWindow):
             else:
                 self.step_label.set_visible(False)
         else:
-            self.focus_label.set_text(_("All done! 🎉"))
+            if self.tasks:
+                self.focus_label.set_text(_("All done! 🎉"))
+            else:
+                self.focus_label.set_text(_("Add a task to get started"))
             self.step_label.set_visible(False)
         self.reward_label.set_visible(False)
 
