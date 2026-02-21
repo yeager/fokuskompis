@@ -323,6 +323,13 @@ class MainWindow(Adw.ApplicationWindow):
                 label=_("No music files found.\nAdd .mp3 files to ~/.config/fokuskompis/music/"),
                 css_classes=["dim-label"], margin_top=16))
 
+        # Credits
+        credits = Gtk.Label(label=_("Public domain music. Performances by Jerzy Kulik.\nSource: Internet Archive"))
+        credits.add_css_class("dim-label")
+        credits.set_margin_top(20)
+        credits.set_opacity(0.6)
+        page.append(credits)
+
         return page
 
     def _on_music_toggle(self, btn):
