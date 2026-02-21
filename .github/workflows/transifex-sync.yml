@@ -6,13 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install TX CLI
+        run: pip install transifex-client
       - name: Pull translations
         env:
           TX_TOKEN: ${{ secrets.TX_TOKEN }}
         run: |
-          pip install transifex-client
-          tx pull -a --force
-      - name: Push changes
+          tx pull -a --minimum-perc=1 || true
+      - name: Commit
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"

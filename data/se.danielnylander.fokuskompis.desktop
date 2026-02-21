@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Fokuskompis
+Name=Focus Companion
 Name[sv]=Fokuskompis
 GenericName=Focus Manager
 GenericName[sv]=Fokushanterare
@@ -10,5 +10,5 @@ Icon=se.danielnylander.fokuskompis
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;Accessibility;
-Keywords=focus;adhd;autism;pomodoro;task;
-Keywords[sv]=fokus;adhd;autism;pomodoro;uppgift;
+Keywords=focus;adhd;autism;pomodoro;task;timer;
+Keywords[sv]=fokus;adhd;autism;pomodoro;uppgift;timer;

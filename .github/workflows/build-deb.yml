@@ -1,52 +1,69 @@
 name: Build .deb
 on:
-  release:
-    types: [published]
+  push:
+    tags: ['v*']
   workflow_dispatch:
 jobs:
-  build-deb:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build .deb
+      - name: Install build dependencies
+        run: sudo apt-get update && sudo apt-get install -y dpkg-dev gettext
+      - name: Compile translations
         run: |
-          set -e
-          PKG="fokuskompis"
-          PYNAME="fokuskompis"
-          VER=$(python3 -c "exec(open('fokuskompis/__init__.py').read()); print(__version__)")
-          echo "Building ${PKG} ${VER}"
-          sudo apt-get install -y gettext
-          ROOT="pkg-deb/${PKG}"
-          mkdir -p ${ROOT}/usr/lib/python3/dist-packages/${PYNAME}
-          mkdir -p ${ROOT}/usr/bin
-          mkdir -p ${ROOT}/usr/share/locale
-          mkdir -p ${ROOT}/usr/share/applications
-          mkdir -p ${ROOT}/usr/share/icons/hicolor/scalable/apps
-          mkdir -p ${ROOT}/DEBIAN
-          cp -r ${PYNAME}/* ${ROOT}/usr/lib/python3/dist-packages/${PYNAME}/
-          printf '#!/usr/bin/python3\nimport sys\nfrom fokuskompis.main import main\nsys.exit(main())\n' > ${ROOT}/usr/bin/${PKG}
-          chmod 755 ${ROOT}/usr/bin/${PKG}
-          cp data/*.desktop ${ROOT}/usr/share/applications/
-          cp data/icons/*.svg ${ROOT}/usr/share/icons/hicolor/scalable/apps/
           for po in po/*.po; do
             [ -f "$po" ] || continue
             lang=$(basename "$po" .po)
-            [ "$lang" = "README" ] && continue
-            mkdir -p ${ROOT}/usr/share/locale/${lang}/LC_MESSAGES
-            msgfmt -o ${ROOT}/usr/share/locale/${lang}/LC_MESSAGES/${PKG}.mo "$po"
+            mkdir -p locale/$lang/LC_MESSAGES
+            msgfmt "$po" -o locale/$lang/LC_MESSAGES/fokuskompis.mo
           done
-          printf 'Package: %s\nVersion: %s-1\nArchitecture: all\nMaintainer: Daniel Nylander <daniel@danielnylander.se>\nDepends: python3 (>= 3.10), python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1\nSection: utils\nPriority: optional\nHomepage: https://github.com/yeager/fokuskompis\nDescription: Focus and task manager for ADHD and autism\n' "${PKG}" "${VER}" > ${ROOT}/DEBIAN/control
-          dpkg-deb --build --root-owner-group ${ROOT}
-          mv pkg-deb/*.deb .
-      - name: Upload .deb to release
+      - name: Build .deb
+        run: |
+          PKG=fokuskompis
+          VER=$(python3 -c "import re; print(re.search(r'__version__\s*=\s*\"([^\"]+)\"', open('src/fokuskompis/__init__.py').read()).group(1))")
+          DIR="${PKG}_${VER}_all"
+          mkdir -p "$DIR/DEBIAN"
+          mkdir -p "$DIR/usr/lib/python3/dist-packages/$PKG"
+          mkdir -p "$DIR/usr/bin"
+          mkdir -p "$DIR/usr/share/applications"
+          mkdir -p "$DIR/usr/share/icons/hicolor/scalable/apps"
+          cp src/$PKG/*.py "$DIR/usr/lib/python3/dist-packages/$PKG/"
+          # Translations
+          for po in po/*.po; do
+            [ -f "$po" ] || continue
+            lang=$(basename "$po" .po)
+            mkdir -p "$DIR/usr/share/locale/$lang/LC_MESSAGES"
+            msgfmt "$po" -o "$DIR/usr/share/locale/$lang/LC_MESSAGES/$PKG.mo"
+          done
+          cp data/se.danielnylander.fokuskompis.desktop "$DIR/usr/share/applications/"
+          cp data/icons/se.danielnylander.fokuskompis.svg "$DIR/usr/share/icons/hicolor/scalable/apps/" 2>/dev/null || true
+          # Launcher
+          cat > "$DIR/usr/bin/$PKG" << 'LAUNCHER'
+          #!/usr/bin/env python3
+          from fokuskompis.main import main
+          main()
+          LAUNCHER
+          sed -i 's/^          //' "$DIR/usr/bin/$PKG"
+          chmod 755 "$DIR/usr/bin/$PKG"
+          cat > "$DIR/DEBIAN/control" << EOF
+          Package: $PKG
+          Version: $VER
+          Section: utils
+          Priority: optional
+          Architecture: all
+          Depends: python3, python3-gi, gir1.2-gtk-4.0, gir1.2-adw-1
+          Maintainer: Daniel Nylander <daniel@danielnylander.se>
+          Description: Focus & task manager for ADHD and autism
+           GTK4/Adwaita focus manager with Pomodoro timer, step breakdown and thought parking.
+          Homepage: https://www.autismappar.se
+          EOF
+          sed -i 's/^          //' "$DIR/DEBIAN/control"
+          dpkg-deb --build "$DIR"
+      - name: Upload to release
+        if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VER=$(python3 -c "exec(open('fokuskompis/__init__.py').read()); print(__version__)")
-          DEB="fokuskompis_${VER}-1_all.deb"
-          gh release upload "v${VER}" "$DEB" --clobber 2>/dev/null || \
-          gh release upload "${{ github.ref_name }}" "$DEB" --clobber 2>/dev/null || true
-      - uses: actions/upload-artifact@v4
-        with:
-          name: deb-package
-          path: "*.deb"
+          VER=$(python3 -c "import re; print(re.search(r'__version__\s*=\s*\"([^\"]+)\"', open('src/fokuskompis/__init__.py').read()).group(1))")
+          gh release upload "${GITHUB_REF_NAME}" fokuskompis_${VER}_all.deb --clobber || true
