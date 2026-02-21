@@ -1,50 +1,31 @@
-"""Accessibility helpers for children's apps."""
+"""Accessibility module for children's apps — large text for readability."""
 import gi
-gi.require_version('Gtk', '4.0')
+gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk, Gdk
 
-
-_LARGE_TEXT_CSS = """
-window button label,
-window .pill label {
-    font-size: 16pt;
-    font-weight: 500;
+_LARGE_TEXT_CSS = b"""
+window label, window button label, window .title, window .subtitle {
+    font-size: 20px !important;
 }
-
-window .title-1 {
-    font-size: 28pt;
+window headerbar .title {
+    font-size: 22px !important;
 }
-
-window .title-2 {
-    font-size: 22pt;
+window .large-text {
+    font-size: 24px !important;
 }
-
-window .title-3 {
-    font-size: 18pt;
-}
-
-window .body,
-window label {
-    font-size: 15pt;
-}
-
-window listview row label,
-window listbox row label {
-    font-size: 15pt;
-}
-
-messagedialog label {
-    font-size: 15pt;
+window button {
+    min-height: 44px;
+    min-width: 44px;
 }
 """
 
-
 def apply_large_text():
-    """Load large-text CSS provider for accessibility."""
+    """Apply large text CSS globally for accessibility."""
     provider = Gtk.CssProvider()
-    provider.load_from_string(_LARGE_TEXT_CSS)
-    Gtk.StyleContext.add_provider_for_display(
-        Gdk.Display.get_default(),
-        provider,
-        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 100,
-    )
+    provider.load_from_data(_LARGE_TEXT_CSS)
+    display = Gdk.Display.get_default()
+    if display:
+        Gtk.StyleContext.add_provider_for_display(
+            display, provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 100
+        )
