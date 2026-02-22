@@ -1,35 +1,30 @@
 # Fokuskompis
 
+Fokusverktyg med Pomodoro-timer och tanke-parkering.
+Designad för ADHD.
 
-## Screenshots
+GTK4/Adwaita · Python · v0.2.4 · 74 översättningsbara strängar
 
-| English | Svenska |
-|---------|---------|
-| ![English](screenshots/fokuskompis_en.png) | ![Svenska](screenshots/fokuskompis_sv.png) |
+Del av [Autismappar](https://autismappar.se) — fria verktyg för barn med autism, språkstörning och ADHD.
 
-Focus & task manager for people with ADHD and autism.
+## Installation
 
-## Features
-
-- **Single-task focus** — one task at a time, big and clear
-- **Pomodoro timer** — configurable work/break intervals with visual countdown
-- **Step breakdown** — split big tasks into smaller steps
-- **Park thoughts** — capture distracting thoughts without losing focus
-- **Visual rewards** — stars on task completion
-- **TTS alerts** — Piper (neural) or espeak-ng voice notifications
-
-## Install
-
-### Debian/Ubuntu
+### Ubuntu / Debian
 ```bash
 sudo apt install fokuskompis
 ```
+Repo: [yeager/debian-repo](https://github.com/yeager/debian-repo)
 
 ### Fedora
 ```bash
 sudo dnf install fokuskompis
 ```
+Repo: [yeager/rpm-repo](https://github.com/yeager/rpm-repo)
 
-## License
+## Översättning
 
-GPL-3.0-or-later
+Översätts via [Transifex](https://app.transifex.com/danielnylander/fokuskompis/). 11 språk.
+
+## Licens
+
+GPL-3.0-or-later · Daniel Nylander <daniel@danielnylander.se>
