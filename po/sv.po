@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 20:53+0100\n"
+"POT-Creation-Date: 2026-02-22 06:01+0100\n"
 "PO-Revision-Date: 2026-02-21 13:23+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305128/sv/)\n"
@@ -21,141 +21,142 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/export.py:13
+#: src/fokuskompis/export.py:13
 msgid "Focus Companion"
 msgstr "Fokuskompis"
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Task"
 msgstr "Uppgift"
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Steps"
 msgstr "Steg"
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Done"
 msgstr "Klart"
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Date"
 msgstr "Datum"
 
-#: src/export.py:33
+#: src/fokuskompis/export.py:33
 msgid "Yes"
 msgstr "Ja"
 
-#: src/export.py:33
+#: src/fokuskompis/export.py:33
 msgid "No"
 msgstr "Nej"
 
-#: src/export.py:38 src/export.py:112
+#: src/fokuskompis/export.py:38 src/fokuskompis/export.py:112
 msgid "Parked Thoughts"
 msgstr "Parkerade tankar"
 
-#: src/export.py:74
+#: src/fokuskompis/export.py:74
 msgid "Focus Companion — Tasks"
 msgstr "Fokuskompis — Uppgifter"
 
-#: src/export.py:139
+#: src/fokuskompis/export.py:139
 msgid "Export Tasks"
 msgstr "Exportera uppgifter"
 
-#: src/export.py:140
+#: src/fokuskompis/export.py:140
 msgid "Choose export format:"
 msgstr "Välj exportformat:"
 
-#: src/export.py:143 src/main.py:521 src/main.py:577
+#: src/fokuskompis/export.py:143 src/fokuskompis/main.py:521
+#: src/fokuskompis/main.py:577
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/export.py:144
+#: src/fokuskompis/export.py:144
 msgid "CSV"
 msgstr "CSV"
 
-#: src/export.py:145
+#: src/fokuskompis/export.py:145
 msgid "JSON"
 msgstr "JSON"
 
-#: src/export.py:146
+#: src/fokuskompis/export.py:146
 msgid "PDF"
 msgstr "PDF"
 
-#: src/export.py:167
+#: src/fokuskompis/export.py:167
 msgid "Save Export"
 msgstr "Spara export"
 
-#: src/export.py:181
+#: src/fokuskompis/export.py:181
 #, python-format
 msgid "Exported %s"
 msgstr "Exporterade %s"
 
-#: src/export.py:184 src/export.py:207
+#: src/fokuskompis/export.py:184 src/fokuskompis/export.py:207
 #, python-format
 msgid "Export error: %s"
 msgstr "Exportfel: %s"
 
-#: src/export.py:189
+#: src/fokuskompis/export.py:189
 msgid "Save PDF"
 msgstr "Spara PDF"
 
-#: src/export.py:202
+#: src/fokuskompis/export.py:202
 msgid "PDF exported"
 msgstr "PDF exporterad"
 
-#: src/export.py:204
+#: src/fokuskompis/export.py:204
 msgid "PDF export requires cairo."
 msgstr "PDF-export kräver cairo."
 
-#: src/main.py:208 src/main.py:742
+#: src/fokuskompis/main.py:208 src/fokuskompis/main.py:745
 msgid "Fokuskompis"
 msgstr "Fokuskompis"
 
-#: src/main.py:226 src/main.py:757
+#: src/fokuskompis/main.py:226 src/fokuskompis/main.py:760
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: src/main.py:227 src/main.py:801
+#: src/fokuskompis/main.py:227 src/fokuskompis/main.py:804
 msgid "Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar"
 
-#: src/main.py:228
+#: src/fokuskompis/main.py:228
 msgid "About Fokuskompis"
 msgstr "Om Fokuskompis"
 
-#: src/main.py:233 src/main.py:499
+#: src/fokuskompis/main.py:233 src/fokuskompis/main.py:499
 msgid "New Task"
 msgstr "Ny uppgift"
 
-#: src/main.py:248
+#: src/fokuskompis/main.py:248
 msgid "Focus"
 msgstr "Fokus"
 
-#: src/main.py:253
+#: src/fokuskompis/main.py:253
 msgid "Tasks"
 msgstr "Uppgifter"
 
-#: src/main.py:258
+#: src/fokuskompis/main.py:258
 msgid "Parked"
 msgstr "Parkerad"
 
-#: src/main.py:263
+#: src/fokuskompis/main.py:263
 msgid "Music"
 msgstr "Musik"
 
-#: src/main.py:280
+#: src/fokuskompis/main.py:280
 msgid "Focus Music"
 msgstr "Fokusmusik"
 
-#: src/main.py:284
+#: src/fokuskompis/main.py:284
 msgid "Classical music to help you concentrate"
 msgstr "Klassisk musik som hjälper dig att koncentrera dig"
 
-#: src/main.py:299
+#: src/fokuskompis/main.py:299
 msgid "Play / Pause"
 msgstr "Spela upp / Paus"
 
-#: src/main.py:323
+#: src/fokuskompis/main.py:323
 msgid ""
 "No music files found.\n"
 "Add .mp3 files to ~/.config/fokuskompis/music/"
@@ -163,7 +164,7 @@ msgstr ""
 "Inga musikfiler hittades.\n"
 "Lägg till .mp3-filer till ~/.config/fokuskompis/music/"
 
-#: src/main.py:327
+#: src/fokuskompis/main.py:327
 msgid ""
 "Public domain music. Performances by Jerzy Kulik.\n"
 "Source: Internet Archive"
@@ -171,141 +172,141 @@ msgstr ""
 "Fri musik (Public domain). Framföranden av Jerzy Kulik.\n"
 "Källa: Internet Archive"
 
-#: src/main.py:363
+#: src/fokuskompis/main.py:363
 msgid "No tasks yet"
 msgstr "Inga uppgifter ännu"
 
-#: src/main.py:380
+#: src/fokuskompis/main.py:380
 msgid "Start"
 msgstr "Starta"
 
-#: src/main.py:386
+#: src/fokuskompis/main.py:386
 msgid "Pause"
 msgstr "Pausa"
 
-#: src/main.py:392
+#: src/fokuskompis/main.py:392
 msgid "Reset"
 msgstr "Återställ"
 
-#: src/main.py:402
+#: src/fokuskompis/main.py:402
 msgid "✓ Done"
 msgstr "✓ Klar"
 
-#: src/main.py:408
+#: src/fokuskompis/main.py:408
 msgid "Skip →"
 msgstr "Hoppa över →"
 
-#: src/main.py:413
+#: src/fokuskompis/main.py:413
 msgid "💭 Park Thought"
 msgstr "💭 Parkera tanke"
 
-#: src/main.py:449
+#: src/fokuskompis/main.py:449
 msgid "Quick thought…"
 msgstr "Snabb tanke…"
 
-#: src/main.py:482
+#: src/fokuskompis/main.py:482
 #, python-brace-format
 msgid "Step {current} of {total}: {step}"
 msgstr "Steg {current} av {total}: {step}"
 
-#: src/main.py:492
+#: src/fokuskompis/main.py:492
 msgid "All done! 🎉"
 msgstr "Allt klart! 🎉"
 
-#: src/main.py:494
+#: src/fokuskompis/main.py:494
 msgid "Add a task to get started"
 msgstr "Lägg till en uppgift för att starta"
 
-#: src/main.py:500
+#: src/fokuskompis/main.py:500
 msgid "Enter task title and optional steps (one per line):"
 msgstr "Ange uppgiftens titel och valfria steg (ett per rad):"
 
-#: src/main.py:506
+#: src/fokuskompis/main.py:506
 msgid "Task title"
 msgstr "Uppgiftens titel"
 
-#: src/main.py:509
+#: src/fokuskompis/main.py:509
 msgid "Steps (optional, one per line):"
 msgstr "Steg (valfritt, ett per rad):"
 
-#: src/main.py:522
+#: src/fokuskompis/main.py:522
 msgid "Add"
 msgstr "Lägg till"
 
-#: src/main.py:551
+#: src/fokuskompis/main.py:551
 msgid "⭐ Great job! Task completed! ⭐"
 msgstr "⭐ Jättebra jobbat! Uppgiften är klar! ⭐"
 
-#: src/main.py:554
+#: src/fokuskompis/main.py:554
 msgid "Well done!"
 msgstr "Bra jobbat!"
 
-#: src/main.py:571
+#: src/fokuskompis/main.py:571
 msgid "Park a Thought"
 msgstr "Parkera en tanke"
 
-#: src/main.py:572
+#: src/fokuskompis/main.py:572
 msgid "Write it down and get back to focus:"
 msgstr "Skriv ner den och återgå till att fokusera:"
 
-#: src/main.py:573
+#: src/fokuskompis/main.py:573
 msgid "What's on your mind?"
 msgstr "Vad tänker du på?"
 
-#: src/main.py:578
+#: src/fokuskompis/main.py:578
 msgid "Park It"
 msgstr "Parkera den"
 
-#: src/main.py:631
+#: src/fokuskompis/main.py:631
 msgid "Time to focus!"
 msgstr "Dags att fokusera!"
 
-#: src/main.py:636
+#: src/fokuskompis/main.py:636
 msgid "Break time!"
 msgstr "Dags för rast!"
 
-#: src/main.py:649
+#: src/fokuskompis/main.py:649
 msgid "Completed"
 msgstr "Färdigt"
 
-#: src/main.py:651
+#: src/fokuskompis/main.py:651
 #, python-brace-format
 msgid "{n} steps"
 msgstr "{n} steg"
 
-#: src/main.py:672
+#: src/fokuskompis/main.py:672
 msgid "Convert to task"
 msgstr "Konvertera till uppgift"
 
-#: src/main.py:751
+#: src/fokuskompis/main.py:754
 msgid "Focus & task manager for people with ADHD and autism"
 msgstr "Fokus- och uppgiftshanterare för personer med ADHD och autism"
 
-#: src/main.py:758
+#: src/fokuskompis/main.py:761
 msgid "Timer"
 msgstr "Timer"
 
-#: src/main.py:760
+#: src/fokuskompis/main.py:763
 msgid "Pomodoro Timer"
 msgstr "Pomodoro-timer"
 
-#: src/main.py:765
+#: src/fokuskompis/main.py:768
 msgid "Work duration (minutes)"
 msgstr "Arbetstid (minuter)"
 
-#: src/main.py:770
+#: src/fokuskompis/main.py:773
 msgid "Break duration (minutes)"
 msgstr "Rastlängd (minuter)"
 
-#: src/main.py:775
+#: src/fokuskompis/main.py:778
 msgid "Long break duration (minutes)"
 msgstr "Lång rastlängd (minuter)"
 
-#: src/main.py:779
+#: src/fokuskompis/main.py:782
 msgid "Sound notifications"
 msgstr "Ljudaviseringar"
 
-#: src/main.py:803
+#: src/fokuskompis/main.py:806
 msgid ""
 "Ctrl+Q — Quit\n"
 "Ctrl+N — New task\n"
@@ -315,6 +316,28 @@ msgstr ""
 "Ctrl+N — Ny uppgift\n"
 "Mellanslag — Starta/pausa timer"
 
-#: src/main.py:808
+#: src/fokuskompis/main.py:811
 msgid "Close"
 msgstr "Stäng"
+
+#: src/fokuskompis/main.py:827
+msgid "Welcome"
+msgstr ""
+
+#: src/fokuskompis/main.py:833
+msgid "Welcome to Focus Buddy"
+msgstr ""
+
+#: src/fokuskompis/main.py:835
+msgid ""
+"Stay focused with timers and task management.\n"
+"\n"
+"✓ Pomodoro-style focus timer\n"
+"✓ Task list with completion tracking\n"
+"✓ Break reminders\n"
+"✓ Calm, distraction-free interface"
+msgstr ""
+
+#: src/fokuskompis/main.py:838
+msgid "Get Started"
+msgstr ""
