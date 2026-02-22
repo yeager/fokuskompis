@@ -495,7 +495,7 @@ class MainWindow(Adw.ApplicationWindow):
             self.step_label.set_visible(False)
         self.reward_label.set_visible(False)
 
-    def _on_add_task(self, *_):
+    def _on_add_task(self, *_args):
         dialog = Adw.MessageDialog(transient_for=self, heading=_("New Task"))
         dialog.set_body(_("Enter task title and optional steps (one per line):"))
 
@@ -540,7 +540,7 @@ class MainWindow(Adw.ApplicationWindow):
         dialog.connect("response", on_response)
         dialog.present()
 
-    def _on_done(self, *_):
+    def _on_done(self, *_args):
         task = self._current_task()
         if not task:
             return
@@ -556,7 +556,7 @@ class MainWindow(Adw.ApplicationWindow):
         self._refresh_task_list()
         self._update_focus_view()
 
-    def _on_skip(self, *_):
+    def _on_skip(self, *_args):
         task = self._current_task()
         if not task:
             return
@@ -567,7 +567,7 @@ class MainWindow(Adw.ApplicationWindow):
         self._refresh_task_list()
         self._update_focus_view()
 
-    def _on_park_thought(self, *_):
+    def _on_park_thought(self, *_args):
         dialog = Adw.MessageDialog(transient_for=self, heading=_("Park a Thought"))
         dialog.set_body(_("Write it down and get back to focus:"))
         entry = Gtk.Entry(placeholder_text=_("What's on your mind?"))
@@ -590,7 +590,7 @@ class MainWindow(Adw.ApplicationWindow):
         dialog.connect("response", on_response)
         dialog.present()
 
-    def _on_add_parked(self, *_):
+    def _on_add_parked(self, *_args):
         text = self.parked_entry.get_text().strip()
         if text:
             self.parked.append(text)
@@ -598,7 +598,7 @@ class MainWindow(Adw.ApplicationWindow):
             self._save_tasks()
             self._refresh_parked_list()
 
-    def _on_start_timer(self, *_):
+    def _on_start_timer(self, *_args):
         if self.timer.remaining > 0 and not self.timer.running:
             self.timer.resume()
         else:
@@ -612,12 +612,12 @@ class MainWindow(Adw.ApplicationWindow):
         self.start_btn.set_sensitive(False)
         self.pause_btn.set_sensitive(True)
 
-    def _on_pause_timer(self, *_):
+    def _on_pause_timer(self, *_args):
         self.timer.pause()
         self.start_btn.set_sensitive(True)
         self.pause_btn.set_sensitive(False)
 
-    def _on_reset_timer(self, *_):
+    def _on_reset_timer(self, *_args):
         self.timer.reset()
         self.start_btn.set_sensitive(True)
         self.pause_btn.set_sensitive(False)
@@ -713,7 +713,7 @@ class FokuskompisApp(Adw.Application):
         super().__init__(application_id=APP_ID)
         self.connect("activate", self._on_activate)
 
-    def _on_activate(self, *_):
+    def _on_activate(self, *_args):
         win = self.props.active_window
         if not win:
             win = MainWindow(self)
@@ -740,7 +740,7 @@ class FokuskompisApp(Adw.Application):
         action.connect("activate", callback)
         self.add_action(action)
 
-    def _on_about(self, *_):
+    def _on_about(self, *_args):
         dialog = Adw.AboutDialog(
             application_name=_("Fokuskompis"),
             application_icon=APP_ID,
@@ -755,7 +755,7 @@ class FokuskompisApp(Adw.Application):
         )
         dialog.present(self.props.active_window)
 
-    def _on_preferences(self, *_):
+    def _on_preferences(self, *_args):
         win = self.props.active_window
         prefs = Adw.PreferencesWindow(title=_("Preferences"), transient_for=win)
         page = Adw.PreferencesPage(title=_("Timer"))
@@ -798,7 +798,7 @@ class FokuskompisApp(Adw.Application):
         prefs.connect("close-request", on_close)
         prefs.present()
 
-    def _on_shortcuts(self, *_):
+    def _on_shortcuts(self, *_args):
         dialog = Adw.MessageDialog(
             transient_for=self.props.active_window,
             heading=_("Keyboard Shortcuts"),
