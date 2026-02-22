@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[o:danielnylander:p:fokuskompis:r:fokuskompis]
+[o:danielnylander:p:fokuskompis:r:fokuskompis-pot]
 file_filter = po/<lang>.po
 source_file = po/fokuskompis.pot
 source_lang = en
