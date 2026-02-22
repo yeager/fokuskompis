@@ -1,0 +1,332 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-22 06:01+0100\n"
+"PO-Revision-Date: 2026-02-22 08:37+0000\n"
+"Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305128/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/fokuskompis/export.py:13
+msgid "Focus Companion"
+msgstr ""
+
+#: src/fokuskompis/export.py:27
+msgid "Task"
+msgstr ""
+
+#: src/fokuskompis/export.py:27
+msgid "Steps"
+msgstr ""
+
+#: src/fokuskompis/export.py:27
+msgid "Done"
+msgstr ""
+
+#: src/fokuskompis/export.py:27
+msgid "Date"
+msgstr ""
+
+#: src/fokuskompis/export.py:33
+msgid "Yes"
+msgstr ""
+
+#: src/fokuskompis/export.py:33
+msgid "No"
+msgstr ""
+
+#: src/fokuskompis/export.py:38 src/fokuskompis/export.py:112
+msgid "Parked Thoughts"
+msgstr ""
+
+#: src/fokuskompis/export.py:74
+msgid "Focus Companion — Tasks"
+msgstr ""
+
+#: src/fokuskompis/export.py:139
+msgid "Export Tasks"
+msgstr ""
+
+#: src/fokuskompis/export.py:140
+msgid "Choose export format:"
+msgstr ""
+
+#: src/fokuskompis/export.py:143 src/fokuskompis/main.py:521
+#: src/fokuskompis/main.py:577
+msgid "Cancel"
+msgstr ""
+
+#: src/fokuskompis/export.py:144
+msgid "CSV"
+msgstr ""
+
+#: src/fokuskompis/export.py:145
+msgid "JSON"
+msgstr ""
+
+#: src/fokuskompis/export.py:146
+msgid "PDF"
+msgstr ""
+
+#: src/fokuskompis/export.py:167
+msgid "Save Export"
+msgstr ""
+
+#: src/fokuskompis/export.py:181
+#, python-format
+msgid "Exported %s"
+msgstr ""
+
+#: src/fokuskompis/export.py:184 src/fokuskompis/export.py:207
+#, python-format
+msgid "Export error: %s"
+msgstr ""
+
+#: src/fokuskompis/export.py:189
+msgid "Save PDF"
+msgstr ""
+
+#: src/fokuskompis/export.py:202
+msgid "PDF exported"
+msgstr ""
+
+#: src/fokuskompis/export.py:204
+msgid "PDF export requires cairo."
+msgstr ""
+
+#: src/fokuskompis/main.py:208 src/fokuskompis/main.py:745
+msgid "Fokuskompis"
+msgstr ""
+
+#: src/fokuskompis/main.py:226 src/fokuskompis/main.py:760
+msgid "Preferences"
+msgstr ""
+
+#: src/fokuskompis/main.py:227 src/fokuskompis/main.py:804
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/fokuskompis/main.py:228
+msgid "About Fokuskompis"
+msgstr ""
+
+#: src/fokuskompis/main.py:233 src/fokuskompis/main.py:499
+msgid "New Task"
+msgstr ""
+
+#: src/fokuskompis/main.py:248
+msgid "Focus"
+msgstr ""
+
+#: src/fokuskompis/main.py:253
+msgid "Tasks"
+msgstr ""
+
+#: src/fokuskompis/main.py:258
+msgid "Parked"
+msgstr ""
+
+#: src/fokuskompis/main.py:263
+msgid "Music"
+msgstr ""
+
+#: src/fokuskompis/main.py:280
+msgid "Focus Music"
+msgstr ""
+
+#: src/fokuskompis/main.py:284
+msgid "Classical music to help you concentrate"
+msgstr ""
+
+#: src/fokuskompis/main.py:299
+msgid "Play / Pause"
+msgstr ""
+
+#: src/fokuskompis/main.py:323
+msgid ""
+"No music files found.\n"
+"Add .mp3 files to ~/.config/fokuskompis/music/"
+msgstr ""
+
+#: src/fokuskompis/main.py:327
+msgid ""
+"Public domain music. Performances by Jerzy Kulik.\n"
+"Source: Internet Archive"
+msgstr ""
+
+#: src/fokuskompis/main.py:363
+msgid "No tasks yet"
+msgstr ""
+
+#: src/fokuskompis/main.py:380
+msgid "Start"
+msgstr ""
+
+#: src/fokuskompis/main.py:386
+msgid "Pause"
+msgstr ""
+
+#: src/fokuskompis/main.py:392
+msgid "Reset"
+msgstr ""
+
+#: src/fokuskompis/main.py:402
+msgid "✓ Done"
+msgstr ""
+
+#: src/fokuskompis/main.py:408
+msgid "Skip →"
+msgstr ""
+
+#: src/fokuskompis/main.py:413
+msgid "💭 Park Thought"
+msgstr ""
+
+#: src/fokuskompis/main.py:449
+msgid "Quick thought…"
+msgstr ""
+
+#: src/fokuskompis/main.py:482
+#, python-brace-format
+msgid "Step {current} of {total}: {step}"
+msgstr ""
+
+#: src/fokuskompis/main.py:492
+msgid "All done! 🎉"
+msgstr ""
+
+#: src/fokuskompis/main.py:494
+msgid "Add a task to get started"
+msgstr ""
+
+#: src/fokuskompis/main.py:500
+msgid "Enter task title and optional steps (one per line):"
+msgstr ""
+
+#: src/fokuskompis/main.py:506
+msgid "Task title"
+msgstr ""
+
+#: src/fokuskompis/main.py:509
+msgid "Steps (optional, one per line):"
+msgstr ""
+
+#: src/fokuskompis/main.py:522
+msgid "Add"
+msgstr ""
+
+#: src/fokuskompis/main.py:551
+msgid "⭐ Great job! Task completed! ⭐"
+msgstr ""
+
+#: src/fokuskompis/main.py:554
+msgid "Well done!"
+msgstr ""
+
+#: src/fokuskompis/main.py:571
+msgid "Park a Thought"
+msgstr ""
+
+#: src/fokuskompis/main.py:572
+msgid "Write it down and get back to focus:"
+msgstr ""
+
+#: src/fokuskompis/main.py:573
+msgid "What's on your mind?"
+msgstr ""
+
+#: src/fokuskompis/main.py:578
+msgid "Park It"
+msgstr ""
+
+#: src/fokuskompis/main.py:631
+msgid "Time to focus!"
+msgstr ""
+
+#: src/fokuskompis/main.py:636
+msgid "Break time!"
+msgstr ""
+
+#: src/fokuskompis/main.py:649
+msgid "Completed"
+msgstr ""
+
+#: src/fokuskompis/main.py:651
+#, python-brace-format
+msgid "{n} steps"
+msgstr ""
+
+#: src/fokuskompis/main.py:672
+msgid "Convert to task"
+msgstr ""
+
+#: src/fokuskompis/main.py:754
+msgid "Focus & task manager for people with ADHD and autism"
+msgstr ""
+
+#: src/fokuskompis/main.py:761
+msgid "Timer"
+msgstr ""
+
+#: src/fokuskompis/main.py:763
+msgid "Pomodoro Timer"
+msgstr ""
+
+#: src/fokuskompis/main.py:768
+msgid "Work duration (minutes)"
+msgstr ""
+
+#: src/fokuskompis/main.py:773
+msgid "Break duration (minutes)"
+msgstr ""
+
+#: src/fokuskompis/main.py:778
+msgid "Long break duration (minutes)"
+msgstr ""
+
+#: src/fokuskompis/main.py:782
+msgid "Sound notifications"
+msgstr ""
+
+#: src/fokuskompis/main.py:806
+msgid ""
+"Ctrl+Q — Quit\n"
+"Ctrl+N — New task\n"
+"Space — Start/pause timer"
+msgstr ""
+
+#: src/fokuskompis/main.py:811
+msgid "Close"
+msgstr ""
+
+#: src/fokuskompis/main.py:827
+msgid "Welcome"
+msgstr ""
+
+#: src/fokuskompis/main.py:833
+msgid "Welcome to Focus Buddy"
+msgstr ""
+
+#: src/fokuskompis/main.py:835
+msgid ""
+"Stay focused with timers and task management.\n"
+"\n"
+"✓ Pomodoro-style focus timer\n"
+"✓ Task list with completion tracking\n"
+"✓ Break reminders\n"
+"✓ Calm, distraction-free interface"
+msgstr ""
+
+#: src/fokuskompis/main.py:838
+msgid "Get Started"
+msgstr ""
