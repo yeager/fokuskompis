@@ -4,7 +4,7 @@ build-backend = "setuptools.backends._legacy:_Backend"
 
 [project]
 name = "fokuskompis"
-version = "0.2.2"
+version = "0.2.3"
 description = "Focus & task manager for people with ADHD and autism"
 license = "GPL-3.0-or-later"
 requires-python = ">=3.10"

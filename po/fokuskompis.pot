@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 20:53+0100\n"
+"POT-Creation-Date: 2026-02-22 06:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,293 +17,316 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/export.py:13
+#: src/fokuskompis/export.py:13
 msgid "Focus Companion"
 msgstr ""
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Task"
 msgstr ""
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Steps"
 msgstr ""
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Done"
 msgstr ""
 
-#: src/export.py:27
+#: src/fokuskompis/export.py:27
 msgid "Date"
 msgstr ""
 
-#: src/export.py:33
+#: src/fokuskompis/export.py:33
 msgid "Yes"
 msgstr ""
 
-#: src/export.py:33
+#: src/fokuskompis/export.py:33
 msgid "No"
 msgstr ""
 
-#: src/export.py:38 src/export.py:112
+#: src/fokuskompis/export.py:38 src/fokuskompis/export.py:112
 msgid "Parked Thoughts"
 msgstr ""
 
-#: src/export.py:74
+#: src/fokuskompis/export.py:74
 msgid "Focus Companion — Tasks"
 msgstr ""
 
-#: src/export.py:139
+#: src/fokuskompis/export.py:139
 msgid "Export Tasks"
 msgstr ""
 
-#: src/export.py:140
+#: src/fokuskompis/export.py:140
 msgid "Choose export format:"
 msgstr ""
 
-#: src/export.py:143 src/main.py:521 src/main.py:577
+#: src/fokuskompis/export.py:143 src/fokuskompis/main.py:521
+#: src/fokuskompis/main.py:577
 msgid "Cancel"
 msgstr ""
 
-#: src/export.py:144
+#: src/fokuskompis/export.py:144
 msgid "CSV"
 msgstr ""
 
-#: src/export.py:145
+#: src/fokuskompis/export.py:145
 msgid "JSON"
 msgstr ""
 
-#: src/export.py:146
+#: src/fokuskompis/export.py:146
 msgid "PDF"
 msgstr ""
 
-#: src/export.py:167
+#: src/fokuskompis/export.py:167
 msgid "Save Export"
 msgstr ""
 
-#: src/export.py:181
+#: src/fokuskompis/export.py:181
 #, python-format
 msgid "Exported %s"
 msgstr ""
 
-#: src/export.py:184 src/export.py:207
+#: src/fokuskompis/export.py:184 src/fokuskompis/export.py:207
 #, python-format
 msgid "Export error: %s"
 msgstr ""
 
-#: src/export.py:189
+#: src/fokuskompis/export.py:189
 msgid "Save PDF"
 msgstr ""
 
-#: src/export.py:202
+#: src/fokuskompis/export.py:202
 msgid "PDF exported"
 msgstr ""
 
-#: src/export.py:204
+#: src/fokuskompis/export.py:204
 msgid "PDF export requires cairo."
 msgstr ""
 
-#: src/main.py:208 src/main.py:742
+#: src/fokuskompis/main.py:208 src/fokuskompis/main.py:745
 msgid "Fokuskompis"
 msgstr ""
 
-#: src/main.py:226 src/main.py:757
+#: src/fokuskompis/main.py:226 src/fokuskompis/main.py:760
 msgid "Preferences"
 msgstr ""
 
-#: src/main.py:227 src/main.py:801
+#: src/fokuskompis/main.py:227 src/fokuskompis/main.py:804
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/main.py:228
+#: src/fokuskompis/main.py:228
 msgid "About Fokuskompis"
 msgstr ""
 
-#: src/main.py:233 src/main.py:499
+#: src/fokuskompis/main.py:233 src/fokuskompis/main.py:499
 msgid "New Task"
 msgstr ""
 
-#: src/main.py:248
+#: src/fokuskompis/main.py:248
 msgid "Focus"
 msgstr ""
 
-#: src/main.py:253
+#: src/fokuskompis/main.py:253
 msgid "Tasks"
 msgstr ""
 
-#: src/main.py:258
+#: src/fokuskompis/main.py:258
 msgid "Parked"
 msgstr ""
 
-#: src/main.py:263
+#: src/fokuskompis/main.py:263
 msgid "Music"
 msgstr ""
 
-#: src/main.py:280
+#: src/fokuskompis/main.py:280
 msgid "Focus Music"
 msgstr ""
 
-#: src/main.py:284
+#: src/fokuskompis/main.py:284
 msgid "Classical music to help you concentrate"
 msgstr ""
 
-#: src/main.py:299
+#: src/fokuskompis/main.py:299
 msgid "Play / Pause"
 msgstr ""
 
-#: src/main.py:323
+#: src/fokuskompis/main.py:323
 msgid ""
 "No music files found.\n"
 "Add .mp3 files to ~/.config/fokuskompis/music/"
 msgstr ""
 
-#: src/main.py:327
+#: src/fokuskompis/main.py:327
 msgid ""
 "Public domain music. Performances by Jerzy Kulik.\n"
 "Source: Internet Archive"
 msgstr ""
 
-#: src/main.py:363
+#: src/fokuskompis/main.py:363
 msgid "No tasks yet"
 msgstr ""
 
-#: src/main.py:380
+#: src/fokuskompis/main.py:380
 msgid "Start"
 msgstr ""
 
-#: src/main.py:386
+#: src/fokuskompis/main.py:386
 msgid "Pause"
 msgstr ""
 
-#: src/main.py:392
+#: src/fokuskompis/main.py:392
 msgid "Reset"
 msgstr ""
 
-#: src/main.py:402
+#: src/fokuskompis/main.py:402
 msgid "✓ Done"
 msgstr ""
 
-#: src/main.py:408
+#: src/fokuskompis/main.py:408
 msgid "Skip →"
 msgstr ""
 
-#: src/main.py:413
+#: src/fokuskompis/main.py:413
 msgid "💭 Park Thought"
 msgstr ""
 
-#: src/main.py:449
+#: src/fokuskompis/main.py:449
 msgid "Quick thought…"
 msgstr ""
 
-#: src/main.py:482
+#: src/fokuskompis/main.py:482
 #, python-brace-format
 msgid "Step {current} of {total}: {step}"
 msgstr ""
 
-#: src/main.py:492
+#: src/fokuskompis/main.py:492
 msgid "All done! 🎉"
 msgstr ""
 
-#: src/main.py:494
+#: src/fokuskompis/main.py:494
 msgid "Add a task to get started"
 msgstr ""
 
-#: src/main.py:500
+#: src/fokuskompis/main.py:500
 msgid "Enter task title and optional steps (one per line):"
 msgstr ""
 
-#: src/main.py:506
+#: src/fokuskompis/main.py:506
 msgid "Task title"
 msgstr ""
 
-#: src/main.py:509
+#: src/fokuskompis/main.py:509
 msgid "Steps (optional, one per line):"
 msgstr ""
 
-#: src/main.py:522
+#: src/fokuskompis/main.py:522
 msgid "Add"
 msgstr ""
 
-#: src/main.py:551
+#: src/fokuskompis/main.py:551
 msgid "⭐ Great job! Task completed! ⭐"
 msgstr ""
 
-#: src/main.py:554
+#: src/fokuskompis/main.py:554
 msgid "Well done!"
 msgstr ""
 
-#: src/main.py:571
+#: src/fokuskompis/main.py:571
 msgid "Park a Thought"
 msgstr ""
 
-#: src/main.py:572
+#: src/fokuskompis/main.py:572
 msgid "Write it down and get back to focus:"
 msgstr ""
 
-#: src/main.py:573
+#: src/fokuskompis/main.py:573
 msgid "What's on your mind?"
 msgstr ""
 
-#: src/main.py:578
+#: src/fokuskompis/main.py:578
 msgid "Park It"
 msgstr ""
 
-#: src/main.py:631
+#: src/fokuskompis/main.py:631
 msgid "Time to focus!"
 msgstr ""
 
-#: src/main.py:636
+#: src/fokuskompis/main.py:636
 msgid "Break time!"
 msgstr ""
 
-#: src/main.py:649
+#: src/fokuskompis/main.py:649
 msgid "Completed"
 msgstr ""
 
-#: src/main.py:651
+#: src/fokuskompis/main.py:651
 #, python-brace-format
 msgid "{n} steps"
 msgstr ""
 
-#: src/main.py:672
+#: src/fokuskompis/main.py:672
 msgid "Convert to task"
 msgstr ""
 
-#: src/main.py:751
+#: src/fokuskompis/main.py:754
 msgid "Focus & task manager for people with ADHD and autism"
 msgstr ""
 
-#: src/main.py:758
+#: src/fokuskompis/main.py:761
 msgid "Timer"
 msgstr ""
 
-#: src/main.py:760
+#: src/fokuskompis/main.py:763
 msgid "Pomodoro Timer"
 msgstr ""
 
-#: src/main.py:765
+#: src/fokuskompis/main.py:768
 msgid "Work duration (minutes)"
 msgstr ""
 
-#: src/main.py:770
+#: src/fokuskompis/main.py:773
 msgid "Break duration (minutes)"
 msgstr ""
 
-#: src/main.py:775
+#: src/fokuskompis/main.py:778
 msgid "Long break duration (minutes)"
 msgstr ""
 
-#: src/main.py:779
+#: src/fokuskompis/main.py:782
 msgid "Sound notifications"
 msgstr ""
 
-#: src/main.py:803
+#: src/fokuskompis/main.py:806
 msgid ""
 "Ctrl+Q — Quit\n"
 "Ctrl+N — New task\n"
 "Space — Start/pause timer"
 msgstr ""
 
-#: src/main.py:808
+#: src/fokuskompis/main.py:811
 msgid "Close"
+msgstr ""
+
+#: src/fokuskompis/main.py:827
+msgid "Welcome"
+msgstr ""
+
+#: src/fokuskompis/main.py:833
+msgid "Welcome to Focus Buddy"
+msgstr ""
+
+#: src/fokuskompis/main.py:835
+msgid ""
+"Stay focused with timers and task management.\n"
+"\n"
+"✓ Pomodoro-style focus timer\n"
+"✓ Task list with completion tracking\n"
+"✓ Break reminders\n"
+"✓ Calm, distraction-free interface"
+msgstr ""
+
+#: src/fokuskompis/main.py:838
+msgid "Get Started"
 msgstr ""

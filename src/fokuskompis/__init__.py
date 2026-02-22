@@ -1,3 +1,3 @@
 """Fokuskompis — Focus & Task Manager for ADHD+Autism."""
 
-__version__ = "0.2.2"
+__version__ = "0.2.3"
