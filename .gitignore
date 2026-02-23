@@ -5,3 +5,4 @@ dist/
 build/
 *.deb
 *.rpm
+*.mo
