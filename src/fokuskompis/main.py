@@ -72,14 +72,34 @@ def _save_settings(settings):
         json.dump(settings, f, indent=2, ensure_ascii=False)
 
 
+def _get_current_lang():
+    """Get current UI language code for TTS."""
+    import locale as _locale
+    lang = _locale.getlocale()[0] or "sv_SE"
+    if lang.startswith("sv"):
+        return "sv"
+    elif lang.startswith("en"):
+        return "en"
+    return "sv"  # default fallback
+
+
+# Map language codes to Piper voice models
+_PIPER_VOICES = {
+    "sv": "sv_SE-nst-medium",
+    "en": "en_US-lessac-medium",
+}
+
+
 def _speak(text):
     """TTS: try Piper first, fall back to espeak-ng."""
     def _do():
+        lang = _get_current_lang()
         # Try piper
         if shutil.which("piper"):
+            model = _PIPER_VOICES.get(lang, _PIPER_VOICES["sv"])
             try:
                 p = subprocess.Popen(
-                    ["piper", "--model", "sv_SE-nst-medium", "--output-raw"],
+                    ["piper", "--model", model, "--output-raw"],
                     stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL
                 )
                 raw, _ = p.communicate(text.encode(), timeout=10)
@@ -96,7 +116,7 @@ def _speak(text):
         if shutil.which("espeak-ng"):
             try:
                 subprocess.run(
-                    ["espeak-ng", "-v", "sv", text],
+                    ["espeak-ng", "-v", lang, text],
                     timeout=10, capture_output=True
                 )
             except Exception:

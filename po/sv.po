@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the fokuskompis package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: fokuskompis\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 06:01+0100\n"
+"POT-Creation-Date: 2026-02-22 17:05+0100\n"
 "PO-Revision-Date: 2026-02-21 13:23+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305128/sv/)\n"
@@ -322,11 +322,11 @@ msgstr "Stäng"
 
 #: src/fokuskompis/main.py:827
 msgid "Welcome"
-msgstr ""
+msgstr "Välkommen"
 
 #: src/fokuskompis/main.py:833
 msgid "Welcome to Focus Buddy"
-msgstr ""
+msgstr "Välkommen till Fokuskompis"
 
 #: src/fokuskompis/main.py:835
 msgid ""
@@ -337,7 +337,13 @@ msgid ""
 "✓ Break reminders\n"
 "✓ Calm, distraction-free interface"
 msgstr ""
+"Håll fokus med timers och uppgiftshantering.\n"
+"\n"
+"✓ Fokus-timer i Pomodoro-stil\n"
+"✓ Uppgiftslista med uppföljning av slutförda uppgifter\n"
+"✓ Påminnelser om pauser\n"
+"✓ Lugnt gränssnitt utan distraktioner"
 
 #: src/fokuskompis/main.py:838
 msgid "Get Started"
-msgstr ""
+msgstr "Kom igång"
