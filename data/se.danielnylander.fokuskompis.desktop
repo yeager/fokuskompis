@@ -9,6 +9,6 @@ Exec=fokuskompis
 Icon=se.danielnylander.fokuskompis
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;Utility;Accessibility;
+Categories=GNOME;GTK;Utility;Accessibility;Autismappar
 Keywords=focus;adhd;autism;pomodoro;task;timer;
 Keywords[sv]=fokus;adhd;autism;pomodoro;uppgift;timer;
