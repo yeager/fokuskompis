@@ -1,3 +1,5 @@
+> **⚠️ This app has been migrated to the Autismappar PWA at https://autismappar.se**
+
 # Fokuskompis
 
 Focus and task manager for people with ADHD and autism.
@@ -27,4 +29,3 @@ Daniel Nylander — [danielnylander.se](https://danielnylander.se)
 ## Screenshots
 
 ![fokuskompis](screenshots/fokuskompis.png)
-
